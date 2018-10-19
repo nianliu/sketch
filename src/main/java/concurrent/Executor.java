@@ -51,7 +51,7 @@ public class Executor {
 
     private void execute(List<Callable<List<String>>> callables) throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(callables.size());
-        latch.countDown();
+//        latch.countDown();
         long startTime = System.currentTimeMillis();
 
         callables.forEach(callable -> executorService.execute(() -> {
