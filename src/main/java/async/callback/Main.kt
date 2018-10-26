@@ -1,4 +1,4 @@
-package reactive.callback
+package async.callback
 
 /**
  * Update timer every second via callback functions

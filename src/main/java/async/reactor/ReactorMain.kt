@@ -1,10 +1,9 @@
-package reactive.reactor
+package async.reactor
 
 import reactor.core.publisher.Flux
 import java.time.Duration
 import java.util.*
 import reactor.core.publisher.Mono
-import java.util.function.Consumer
 
 
 fun main(args: Array<String>) {

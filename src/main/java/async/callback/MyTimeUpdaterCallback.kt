@@ -1,4 +1,4 @@
-package reactive.callback
+package async.callback
 
 class MyTimeUpdaterCallback : TimeUpdaterCallback {
 
