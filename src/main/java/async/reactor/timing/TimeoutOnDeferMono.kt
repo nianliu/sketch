@@ -11,13 +11,13 @@ fun main(args: Array<String>) {
     val clock2 = Stopwatch.createUnstarted()
     val clock3 = Stopwatch.createUnstarted()
 
-    val take = Mono.fromCallable<Int> { withSeconds(2) }
+    val take = Mono.fromCallable<Int> { delayedNumber(2) }
             .withStatistics(1, clock1)
 //            .onErrorResume { Mono.empty() }
             .compose {
                 it.flatMap {
                     Mono.just(it)
-                            .map { withSeconds(it + 1) }
+                            .map { delayedNumber(it + 1) }
                             .withStatistics(2, clock2)
                 }
             }
@@ -61,7 +61,7 @@ private fun subscribe(id: Int, clock: Stopwatch) {
     clock.start()
 }
 
-private fun withSeconds(number: Int): Int {
+private fun delayedNumber(number: Int): Int {
     Thread.sleep(number * 1000L)
     println("waiting for $number seconds")
     if (number % 2 == 0) {
