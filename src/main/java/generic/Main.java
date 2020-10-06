@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args) {
         List<Animal> animals = Lists.newArrayList(new Dog(), new Tiger(), new Feline());
         List<Feline> felines = Lists.newArrayList(new Feline(), new Tiger());
-        List<Dog> dogs = Lists.newArrayList(new Dog(), new Animal());
+//        List<Dog> dogs = Lists.newArrayList(new Dog(), new Animal()); //invalid
 //        nonCovariantFn(felines); // List<T> generic type is not covariant
 //        nonCovariantFn(dogs);
         covariantFn(felines);
-        covariantFn(dogs);
+//        covariantFn(dogs); //invalid
     }
 
     // 1. you cannot call this function with subtypes of Animal
@@ -28,7 +28,7 @@ public class Main {
         animals.forEach(Animal::breathe);
         animals.get(0).breathe();
 //        animals.add(new Tiger());
-        animals.add(new Animal());
+//        animals.add(new Animal()); //invalid
     }
 
     static void contraVariantFn(List<? super Feline> atLeastTiger) {
@@ -36,7 +36,7 @@ public class Main {
         List<? super Feline> atLeastTiger1 = atLeastTiger;
         atLeastTiger.add(new Tiger());
         atLeastTiger.add(new Feline());
-        atLeastTiger.add(new Animal());
+//        atLeastTiger.add(new Animal()); //invalid
 
     }
 
