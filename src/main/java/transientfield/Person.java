@@ -1,14 +1,12 @@
 package transientfield;
 
-import lombok.ToString;
 
 import java.io.Serializable;
 
 
 /**
- *  Do not serialize Transient field, you will see full name is null after deserialize.
+ * Do not serialize Transient field, you will see full name is null after deserialize.
  */
-@ToString
 public class Person implements Serializable {
 
     private final String firstName;
