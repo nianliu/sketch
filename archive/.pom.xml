@@ -32,8 +32,8 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                                <sourceDir>archive/main/kotlin</sourceDir>
+                                <sourceDir>main/java</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
@@ -44,8 +44,8 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
-                                <sourceDir>${project.basedir}/src/test/java</sourceDir>
+                                <sourceDir>archive/test/kotlin</sourceDir>
+                                <sourceDir>archive/test/java</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>

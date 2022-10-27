@@ -9,7 +9,7 @@ target
 *.log
 
 build/
-src/main/proto/com/
+archive/main/proto/com/
 !.idea/runConfigurations
 
 .DS_Store
