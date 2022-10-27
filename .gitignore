@@ -1,0 +1,15 @@
+.springBeans
+.classpath
+.settings
+target
+.project
+
+.idea/
+*.iml
+*.log
+
+build/
+src/main/proto/com/
+!.idea/runConfigurations
+
+.DS_Store
